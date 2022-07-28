@@ -52,4 +52,19 @@ class userController extends Controller
         return view('pages.details')->with('date',$dateval)
         ->with('latestNews', $latest)->with('details',$details);
     }
+
+    //Admin login
+    public function login(){
+        date_default_timezone_set('Asia/Dhaka');
+        $date = Carbon::now();
+        $month = $date->format('F');
+        $day=$date->format('l');
+        $tarik=$date->format('d');
+        $year=$date->year;
+        $time=$date->format('h:i:s');
+        
+        $dateval=$day.', '.$month.' '.$tarik.', '.$year;
+
+        return view('pages.login')->with('date',$dateval);
+    }
 }

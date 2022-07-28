@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 Route::get('/portal/home',[userController::class,'homepage'])->name('home');
 Route::get('/portal/news/{id}',[userController::class,'details'])->name('details');
+Route::get('/portal/login',[userController::class,'login'])->name('login');

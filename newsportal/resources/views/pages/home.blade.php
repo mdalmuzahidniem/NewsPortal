@@ -1,4 +1,6 @@
 @extends('layout.topnav')
+
+
 @section('content')
 
     <div class="col-xl-12 stretch-card grid-margin">
